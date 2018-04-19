@@ -3,43 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Авторизация</title>
+    <title>Регистрация</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
     <form class="registration" id="registration">
-        <h1>Registration Form</h1>
+        <h1>Регистрация</h1>
 
-        <label for="username">
-            <span>Username</span>
+        <label for="first-name">
+            <span>Имя</span>
 
-            <input type="text" id="username" minlength="3" required>
+            <input type="text" id="first-name" minlength="3" required>
 
             <ul class="input-requirements">
-                <li>At least 3 characters long</li>
-                <li>Must only contain letters and numbers (no special characters)</li>
+                <li>минимум 3 буквы</li>
+                <li>должен содержать только буквы</li>
             </ul>
         </label>
 
+        <label for="last-name">
+            <span>Фамилия</span>
+
+            <input type="text" id="last-name" minlength="3" required>
+
+            <ul class="input-requirements">
+                <li>минимум 3 буквы</li>
+                <li>должен содержать только буквы</li>
+            </ul>
+        </label>
+
+        <label for="email">
+            <span>Электронная почта</span>
+            <input type="email" id="email" maxlength="100" minlength="8" required>
+        </label>
+
         <label for="password">
-            <span>Password</span>
+            <span>Пароль</span>
 
             <input type="password" id="password" maxlength="100" minlength="8" required>
 
             <ul class="input-requirements">
-                <li>At least 8 characters long (and less than 100 characters)</li>
-                <li>Contains at least 1 number</li>
-                <li>Contains at least 1 lowercase letter</li>
-                <li>Contains at least 1 uppercase letter</li>
-                <li>Contains a special character (e.g. @ !)</li>
+                <li>от 8 до 100 латинских символов</li>
+                <li>минимум 1 цифра</li>
+                <li>минимум 1 строчная буква</li>
+                <li>минимум 1 прописная буква</li>
+                <li>минимум 1 спецсимвол (@, ! и т.п.)</li>
             </ul>
         </label>
 
-        <label for="password_repeat">
-            <span>Repeat Password</span>
-            <input type="password" id="password_repeat" maxlength="100" minlength="8" required>
+        <label for="password_confirm">
+            <span>Подтверждение пароля</span>
+            <input type="password" id="password_confirm" maxlength="100" minlength="8" required>
         </label>
 
         <br>
@@ -49,7 +65,7 @@
     </form>
 </div>
 
-<script src="registration_form.js"></script>
+<script src="all.js"></script>
 
 </body>
 </html>
